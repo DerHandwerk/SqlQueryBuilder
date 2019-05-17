@@ -22,7 +22,6 @@ artifacts:
  - path: 'bin\Release\netstandard2.0\publish'
    name: SqlQuerybuilder
    type: Release DLL
-
 - path: 'bin\Debug\netstandard2.0\publish'
    name: SqlQuerybuilder
    type: Debug DLL
