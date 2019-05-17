@@ -14,13 +14,18 @@ before_build:
   # Display minimal restore text
 build_script:
   # output will be in bin/debug/netcoreapp1.1/publish
-  - cmd: dotnet publish
+  - cmd: dotnet publish -c Debug
+  - cmd: dotnet publish -c Release
 after_build:
   # For once the build has completed
 artifacts:
  - path: 'bin\Release\netstandard2.0\publish'
    name: SqlQuerybuilder
-   type: DLL
+   type: Release DLL
+
+- path: 'bin\Debug\netstandard2.0\publish'
+   name: SqlQuerybuilder
+   type: Debug DLL
 clone_depth: 1
 test_script:
   # restore packages for our unit tests
