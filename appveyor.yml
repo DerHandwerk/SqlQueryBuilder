@@ -19,12 +19,12 @@ build_script:
 after_build:
   # For once the build has completed
 artifacts:
- - path: 'bin\Release\netstandard2.0\publish'
-   name: SqlQuerybuilder
-   type: Release DLL
-- path: 'bin\Debug\netstandard2.0\publish'
-   name: SqlQuerybuilder
-   type: Debug DLL
+  - path: 'bin\Release\netstandard2.0\publish'
+    name: SqlQuerybuilder
+    type: Release DLL
+  - path: 'bin\Debug\netstandard2.0\publish'
+    name: SqlQuerybuilder
+    type: Debug DLL
 clone_depth: 1
 test_script:
   # restore packages for our unit tests
